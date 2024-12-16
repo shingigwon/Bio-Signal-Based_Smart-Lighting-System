@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".AddProfileActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#004d40"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:theme="@style/AppTheme.Toolbar">
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp">
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/ic_arrow_back_white_24dp" />
+
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="수동 조명 제어"
+                        android:textColor="#ffffff"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="60dp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+            <!-- 밝기 퍼센트 텍스트 -->
+            <TextView
+                    android:id="@+id/brightness_label_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="밝기 조절"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:textColor="#004d40" />
+
+            <!-- 곡선형 SeekBar -->
+            <com.marcinmoskala.arcseekbar.ArcSeekBar
+                    android:id="@+id/arcSeekBar"
+                    android:layout_width="300dp"
+                    android:layout_height="150dp"
+                    app:maxProgress="255"
+                    app:progress="255"
+                    app:progressBackgroundWidth="25dp"
+                    app:progressWidth="20dp"
+                    app:roundEdges="true"/>
+
+            <!-- 밝기 퍼센트 및 - / + 버튼 -->
+
+            <!-- 색상 선택 버튼 -->
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:layout_marginBottom="50dp">
+
+                <Button
+                        android:id="@+id/minus_button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/baseline_remove_24"/>
+
+                <TextView
+                        android:id="@+id/brightness_percentage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="255"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        android:textColor="#004d40"
+                        android:layout_marginHorizontal="8dp"/>
+
+                <Button
+                        android:id="@+id/plus_button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/baseline_add_24"/>
+            </LinearLayout>
+
+
+            <!-- 색상 선택 텍스트 -->
+
+
+
+            <GridLayout
+                    android:id="@+id/color_options"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/brightness_percentage"
+                    android:background="@drawable/image_border"
+                    android:layout_marginTop="32dp"
+                    android:columnCount="4"
+                    android:rowCount="2">
+
+                <!-- 빨강색 버튼과 텍스트 -->
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_margin="4dp">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="빨강"
+                            android:textSize="18sp"
+                            android:textColor="#004d40"
+                            android:textStyle="bold"/>
+
+                    <Button
+                            android:id="@+id/redButton"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:background="@drawable/buttonshape"
+                            android:backgroundTint="#F44336"/>
+                </LinearLayout>
+
+                <!-- 주황색 버튼과 텍스트 -->
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_margin="4dp">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="주황"
+                            android:textSize="18sp"
+                            android:textColor="#004d40"
+                            android:textStyle="bold"/>
+
+                    <Button
+                            android:id="@+id/orangeButton"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:background="@drawable/buttonshape"
+                            android:backgroundTint="#FF5722"/>
+                </LinearLayout>
+
+                <!-- 노랑색 버튼과 텍스트 -->
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_margin="4dp">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="노랑"
+                            android:textSize="18sp"
+                            android:textColor="#004d40"
+                            android:textStyle="bold"/>
+
+                    <Button
+                            android:id="@+id/yellowButton"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:background="@drawable/buttonshape"
+                            android:backgroundTint="#FFC107"/>
+                </LinearLayout>
+
+                <!-- 초록색 버튼과 텍스트 -->
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_margin="4dp">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="초록"
+                            android:textSize="18sp"
+                            android:textColor="#004d40"
+                            android:textStyle="bold"/>
+
+                    <Button
+                            android:id="@+id/greenButton"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:background="@drawable/buttonshape"
+                            android:backgroundTint="#4CAF50"/>
+                </LinearLayout>
+
+                <!-- 파랑색 버튼과 텍스트 -->
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_margin="4dp">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="파랑"
+                            android:textSize="18sp"
+                            android:textColor="#004d40"
+                            android:textStyle="bold"/>
+
+                    <Button
+                            android:id="@+id/blueButton"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:background="@drawable/buttonshape"
+                            android:backgroundTint="#2196F3"/>
+                </LinearLayout>
+
+                <!-- 남색 버튼과 텍스트 -->
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_margin="4dp">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="남색"
+                            android:textSize="18sp"
+                            android:textColor="#004d40"
+                            android:textStyle="bold"/>
+
+                    <Button
+                            android:id="@+id/indigoButton"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:background="@drawable/buttonshape"
+                            android:backgroundTint="#3F51B5"/>
+                </LinearLayout>
+
+                <!-- 보라색 버튼과 텍스트 -->
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_margin="4dp">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="보라"
+                            android:textSize="18sp"
+                            android:textColor="#004d40"
+                            android:textStyle="bold"/>
+
+                    <Button
+                            android:id="@+id/purpleButton"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:background="@drawable/buttonshape"
+                            android:backgroundTint="#9C27B0"/>
+                </LinearLayout>
+
+                <!-- 검정색 버튼과 텍스트 -->
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_margin="4dp">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="끄기"
+                            android:textSize="18sp"
+                            android:textColor="#004d40"
+                            android:textStyle="bold"/>
+
+                    <Button
+                            android:id="@+id/OFFButton"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:background="@drawable/buttonshape"
+                            android:backgroundTint="#000000"/>
+                </LinearLayout>
+
+            </GridLayout>
+
+        </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
