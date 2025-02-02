@@ -27,6 +27,7 @@
   - Pulse/Heart Rate
   - DHT11
   - NeoPixel(WS2812B)
+![회로도](https://github.com/user-attachments/assets/b67539c8-a2d8-4b30-9421-7482b1720997)
 
 ## 🗂️ 프로젝트 구조
 1. **데이터베이스 테이블**
