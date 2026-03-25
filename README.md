@@ -44,7 +44,7 @@
 ---
 
 ## 📱 구현 UI
-| 프로필 선택 | 프로필 추가 | 대시 보드 |조명 제어|
+| 프로필 선택 | 프로필 추가 | 대시 보드 |수동 조명 제어|
 |---|---|---|---|
 |<img width="1440" height="3120" alt="시작_프로필추가2" src="https://github.com/user-attachments/assets/5e7050ae-0535-457e-a27b-146282e1a847" />| <img width="1440" height="3120" alt="프로필추가page" src="https://github.com/user-attachments/assets/969f18ee-47c6-4690-a06b-9aa961265eef" />|<img width="1440" height="3120" alt="그래프" src="https://github.com/user-attachments/assets/b7a9f419-2697-4c15-a411-d4a284b3e0bd" />|<img width="1440" height="3120" alt="조명조절2" src="https://github.com/user-attachments/assets/2ef9cb64-3d0e-4e5f-9dca-fd7a6c0f2dcc" />|
 
